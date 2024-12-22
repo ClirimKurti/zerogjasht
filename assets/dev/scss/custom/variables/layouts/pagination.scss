@@ -1,0 +1,15 @@
+// TODO Pagination Styles - Variables
+
+$pagination: (
+    margin: 50px 0,
+    justify-content: flex-start,
+    link-margin: 0 2px 2px 0,
+    link-padding: 13px,
+    link-padding-mobile: 10px,
+    font-size: 16px,
+    font-size-mobile: 15px,
+    color: $baseWhite,
+    hover: $baseThirdly,
+    font-weight: bold,
+    background: $basePrimary
+);

@@ -1,0 +1,92 @@
+// TODO -- Mixins Global --
+
+// TODO Media Query Min Width
+@mixin min-xxl {
+  @media (min-width: 1600px) { @content; }
+}
+
+@mixin min-xl {
+  @media (min-width: 1400px) { @content; }
+}
+
+@mixin min-lg {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin min-md {
+  @media (min-width: 992px) { @content; }
+}
+
+@mixin min-sm {
+  @media (min-width: 767px) { @content; }
+}
+
+@mixin min-xs {
+  @media (min-width: 576px) { @content; }
+}
+
+// TODO Media Query Max Width
+@mixin xxl {
+  @media (max-width: 1600px) { @content; }
+}
+
+@mixin xl {
+  @media (max-width: 1400px) { @content; }
+}
+
+@mixin lg {
+  @media (max-width: 1200px) { @content; }
+}
+
+@mixin md {
+  @media (max-width: 992px) { @content; }
+}
+
+@mixin sm {
+  @media (max-width: 767px) { @content; }
+}
+
+@mixin xs {
+  @media (max-width: 576px) { @content; }
+}
+
+// TODO Size
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// TODO Pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// TODO Placeholder
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+// TODO Animation
+@mixin animation($name, $duration, $timing-function, $delay, $iteration-count, $direction, $fill-mode) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing-function;
+  animation-delay: $delay;
+  animation-iteration-count: $iteration-count;
+  animation-direction: $direction;
+  animation-fill-mode: $fill-mode;
+}
+
+// TODO Background Image
+@mixin background-image($image) {
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

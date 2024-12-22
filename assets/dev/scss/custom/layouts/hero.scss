@@ -1,0 +1,36 @@
+// TODO Hero Styles - Styles
+
+.homepage-hero,
+.internal-hero {
+  min-height: map-get($hero, min-height);
+  padding: map-get($hero, padding);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: map-get($hero, justify-content);
+  align-items: map-get($hero, align-items);
+
+
+
+  h1 {
+    width: 100%;
+    max-width: map-get($hero-title, max-width);
+    color: map-get($hero-title, color);
+    margin: map-get($hero-title, margin);
+    font-family: $titleFont !important;
+    font-weight: map-get($hero-title, font-weight);
+    letter-spacing: map-get($hero-title, letter-spacing);
+    line-height: map-get($hero-title, line-height);
+    font-size: clamp(map-get($hero-title, font-size-mobile), 4vw, map-get($hero-title, font-size));
+
+    @include lg {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    margin: map-get($hero-text, margin);
+    font-size: map-get($hero-text, font-size);
+    color: map-get($hero-text, color)
+  }
+}

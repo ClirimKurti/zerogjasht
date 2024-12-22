@@ -1,0 +1,50 @@
+// TODO FAQ's Page - Variables
+
+$faqs-filter: (
+    padding: 15px 0,
+    border-color: $baseGray,
+    border-width: 1px,
+    link-margin: 3px 7px,
+    link-margin-mobile: 2px 4px,
+    link-font-size: 18px,
+    link-font-size-mobile: 14px,
+    link-letter-spacing: normal,
+    link-font-weight: 400,
+    link-font-family: $baseFont,
+    link-color: $baseSecondary,
+    link-hover: $baseThirdly,
+    link-active: $baseThirdly,
+    link-active-font-weight: normal,
+);
+
+// TODO Max columns for this grid: 4
+$faqs-grid: (
+    cols: 2,
+    gap: 15px,
+    cols-lg: 3,
+    gap-lg: 15px,
+    cols-md: 2,
+    gap-md: 15px,
+    cols-sm: 2,
+    gap-sm: 15px,
+    xs-margin-bottom: 30px,
+);
+
+$faqs-article: (
+    title-padding: 15px,
+    title-padding-mobile: 15px,
+    thumb-height: 250px,
+    thumb-height-mobile: 240px,
+    title-font-size: 24px,
+    title-font-size-mobile: 18px,
+    title-line-height: 1.3,
+    title-font-weight: bold,
+    title-font-family: $titleFont,
+    title-letter-spacing: normal,
+    title-color: $baseSecondary,
+    title-hover: $baseThirdly,
+    background: $baseWhite,
+    box-shadow: $shadowBox,
+    border-color: $baseWhite,
+    border-radius: 0,
+);

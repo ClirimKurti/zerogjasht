@@ -1,0 +1,42 @@
+.frontpageSlider {
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        margin: 0;
+        color: $baseBlack;
+        font-size: 14px;
+        margin-top: 6px;
+        font-weight: 400;
+        max-height: 58px;
+        font-family: $titleFont;
+        line-height: 1.067em;
+        text-align: left;
+    }
+
+    img {
+        width: 178px;
+        height: 100px;
+        object-fit: cover;
+
+        @include sm {
+            width: 100%;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        &::after {
+            color: $baseBlack;
+            font-size: 20px;
+        }
+
+    }
+}

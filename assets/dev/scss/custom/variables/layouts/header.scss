@@ -1,0 +1,79 @@
+// TODO Header Mobile - Variables
+
+$header: (
+    background: $baseWhite,
+    mobile-height: 80px,
+    mobile-background: $baseWhite,
+);
+
+// TODO Menu Desktop - Variables
+$menu-desktop: (
+    font-family: $baseFont,
+    link-color: $baseBlack,
+    link-hover: $baseThirdly,
+    link-font-size: 13px,
+    link-letter-spacing: 1.4px,
+    link-font-weight: bold,
+    link-text-transform: uppercase,
+    link-line-height: 1.2,
+    link-arrow-weight: 2.2px,
+    justify-content: space-between,
+    background: $baseWhite,
+);
+
+// TODO Sub Menu Desktop - Variables
+$sub-menu: (
+    width: 230px,
+    sub-menu-width: 200px,
+    link-color: $baseBlack,
+    link-hover: $baseThirdly,
+    link-font-size: 13px,
+    link-letter-spacing: normal,
+    link-font-weight: bold,
+    link-text-transform: capitalize,
+    link-arrow-weight: 1.6px,
+    background: $baseWhite,
+    box-shadow: $shadowBox,
+);
+
+// TODO Menu Mobile - Variables
+$menu-mobile: (
+    link-color: $baseBlack,
+    link-active: $baseThirdly,
+    link-font-size: 14px,
+    link-letter-spacing: 1px,
+    link-font-weight: bold,
+    link-text-transform: uppercase,
+    link-arrow-weight: 2px,
+    sub-link-font-size: 13px,
+    sub-link-letter-spacing: normal,
+    sub-link-font-weight: bold,
+    sub-link-text-transform: capitalize,
+    border-color: $baseBlack,
+    border-width: 2px,
+    background: $baseWhite,
+);
+
+// TODO CTA Mobile - Variables
+$header-cta-mobile: (
+    height: 80px,
+    background: $basePrimary,
+    phone-font-size: 35px,
+    phone-letter-spacing: 1px,
+    phone-font-weight: bold,
+    phone-color: $baseThirdly,
+    text-font-size: 12px,
+    text-letter-spacing: 2px,
+    text-font-weight: bold,
+    text-color: $baseWhite,
+);
+
+// TODO Burger Mobile - Variables
+$burger: (
+    width: 40px,
+    fill-color: $red,
+    stroke-width: 3px,
+    close-fill-color: $baseThirdly,
+    close-stroke-width: 3px,
+    animation-transition: .45s cubic-bezier(.9, .9, .9, .9),
+);

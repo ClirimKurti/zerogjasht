@@ -1,0 +1,61 @@
+// TODO Pagination By Default - Styles
+
+.pagination {
+  width: 100%;
+  margin: map-get($pagination, margin);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: map-get($pagination, link-margin);
+      list-style-type: none;
+      font-size: map-get($pagination, font-size);
+      background-color: $red;
+      color: map-get($pagination, color);
+      font-weight: map-get($pagination, font-weight);
+      line-height: 1.3;
+
+      @include sm {
+        font-size: map-get($pagination, font-size-mobile);
+      }
+
+      &.active {
+        a {
+          color: $baseBlack;
+        }
+      }
+
+      &.pagination-omission {
+        padding: map-get($pagination, link-padding);
+
+        @include sm {
+          padding: map-get($pagination, link-padding-mobile);
+        }
+      }
+
+      a {
+        display: inline-block;
+        padding: map-get($pagination, link-padding);
+        font-size: map-get($pagination, font-size);
+        font-weight: map-get($pagination, font-weight);
+        line-height: 1.3;
+        color: map-get($pagination, color);
+
+        &:hover {
+          color: $baseWhite;
+        }
+
+        @include sm {
+          padding: map-get($pagination, link-padding-mobile);
+          font-size: map-get($pagination, font-size-mobile);
+        }
+      }
+    }
+  }
+}

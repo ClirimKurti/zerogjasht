@@ -1,0 +1,86 @@
+// TODO Related Articles - Styles
+
+.related {
+  &-articles {
+    margin-top: 50px;
+    border-top: 1px solid $baseSecondary;
+    padding-top: 30px;
+    width: 100%;
+
+    >span {
+      display: block;
+      margin: map-get($related-title, margin);
+      font-family: map-get($related-title, font-family);
+      font-weight: map-get($related-title, font-weight);
+      font-size: 28px;
+      color: $red;
+      line-height: map-get($related-title, line-height);
+      letter-spacing: map-get($related-title, letter-spacing);
+    }
+  }
+
+  &-item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-thumb {
+      @include size(300px, 250px);
+
+      @include xs {
+        @include size(100%, 240px);
+        margin-bottom: 25px;
+      }
+
+      a {
+        @include size(100%);
+        display: block;
+
+        img {
+          @include size(100%);
+          display: block;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+    }
+
+    &-info {
+      width: calc(100% - 300px);
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include xs {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        line-height: .8;
+
+        a {
+          font-size: map-get($related-article, title-font-size);
+          line-height: 0;
+          font-family: $titleFont;
+          font-weight: map-get($related-article, title-font-weight);
+          color: $baseBlack;
+          font-weight: 400;
+
+          &:hover {
+            color: map-get($related-article, title-hover);
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: map-get($related-article, text-font-size);
+        line-height: map-get($related-article, text-line-height);
+        color: map-get($related-article, text-color);
+      }
+    }
+  }
+}

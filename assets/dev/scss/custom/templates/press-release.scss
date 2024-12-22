@@ -1,0 +1,102 @@
+.releases {
+  width: 100%;
+
+  .release {
+    @include size(100%);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $baseBlack;
+
+    &-thumb {
+      @include size(100%, 250px);
+
+      img {
+        @include size(100%);
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    &-meta {
+      padding: 15px;
+      // overflow: hidden;
+
+      span {
+        font-size: 12px;
+        color: $baseBlack
+      }
+
+      h2 {
+        margin: 10px 0;
+        font-size: 24px;
+        line-height: 1;
+        font-family: $titleFont;
+        font-weight: 600;
+        color: $basePrimary;
+      }
+
+      p {
+        font-size: 16px;
+        color: $baseBlack;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.release-header {
+  width: 100%;
+
+  &.archive {
+    h1 {
+      @include md {
+        text-align: center;
+      }
+    }
+  }
+
+  &-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include sm {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-thumb {
+    @include size(300px, 200px);
+    border-radius: 15px;
+    overflow: hidden;
+
+    img {
+      @include size(100%);
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &-title {
+    width: max-content;
+    max-width: calc(100% - 300px);
+    padding-left: 30px;
+
+    @include sm {
+      padding-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    h1 {
+      font-family: $titleFont;
+      font-size: 35px;
+      line-height: 1;
+
+      @include sm {
+        text-align: center;
+      }
+    }
+  }
+}

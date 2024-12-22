@@ -1,0 +1,41 @@
+// TODO Location, Category, Taxonomy Widgets - Variables
+
+$widget-default: (
+    padding-top: 40px,
+    padding-bottom: 30px,
+    padding-left: 20px,
+    padding-right: 20px,
+    padding-left-mobile: 15px,
+    padding-right-mobile: 15px,
+    background: $baseSecondary,
+    border-radius: 0
+);
+
+$widget-default-title: (
+    margin-bottom: 35px,
+    font-family: $titleFont,
+    color: $baseWhite,
+    font-size: 36px,
+    font-size-mobile: 22px,
+    line-height: 1.1,
+    font-weight: bold
+);
+
+$widget-default-link: (
+    margin-bottom: 15px,
+    padding-left: 25px,
+    font-family: $baseFont,
+    font-size: 16px,
+    font-size-mobile: 15px,
+    color: $baseWhite,
+    hover: $baseThirdly,
+    font-weight: normal,
+    text-transform: capitalize,
+    // TODO Arrows Styles
+    arrow-width: 1.5px,
+    arrow-color: $baseThirdly,
+    arrow-hover: $baseWhite,
+    // TODO Arrows Symbols
+    arrow-symbol: false,
+    dot-symbol: true
+);

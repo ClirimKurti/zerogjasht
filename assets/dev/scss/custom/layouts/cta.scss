@@ -1,0 +1,31 @@
+// TODO CTA Default Styles - Styles
+
+body:not(.home) .entry-content {
+  p.rs-content-cta {
+    width: 100%;
+    display: block;
+    margin: map-get($cta, margin);
+    padding: map-get($cta, padding);
+    background-color: map-get($cta, background-color);
+    color: map-get($cta, color);
+    font-family: map-get($cta, font-family);
+    font-weight: map-get($cta, font-weight);
+    letter-spacing: map-get($cta, letter-spacing);
+    line-height: map-get($cta, line-height);
+    font-size: map-get($cta, font-size);
+    text-align: center;
+    @include sm {
+      padding: map-get($cta, padding-mobile);
+      font-size: map-get($cta, font-size-mobile);
+      br {
+        display: none;
+      }
+    }
+    a {
+      color: map-get($cta, color-link);
+      &:hover {
+        color: map-get($cta, color-link-hover);
+      }
+    }
+  }
+}

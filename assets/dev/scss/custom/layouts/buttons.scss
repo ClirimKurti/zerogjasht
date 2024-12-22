@@ -1,0 +1,286 @@
+// TODO Buttons - Styles
+
+.btn-global {
+  padding: map-get($btn-global, padding);
+  height: map-get($btn-global, height);
+  min-width: map-get($btn-global, min-width);
+  width: max-content;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  line-height: 1;
+  font-size: map-get($btn-global, font-size);
+  text-transform: map-get($btn-global, text-transform);
+  font-weight: map-get($btn-global, font-weight);
+  font-family: map-get($btn-global, font-family);
+  letter-spacing: map-get($btn-global, letter-spacing);
+  z-index: 2;
+  border-radius: map-get($btn-global, border-radius);
+  transition: $transition;
+  background-color: $red;
+  text-decoration: none;
+  color: $baseWhite;
+  border: map-get($btn-global, border);
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+}
+
+header.header {
+  button {
+    &.burger {
+      padding: 0;
+      @include size(map-get($burger, width));
+      display: none;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      z-index: 33333;
+      background: none;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      cursor: pointer;
+      overflow: hidden;
+      margin-left: auto;
+
+      &:focus,
+      &:active,
+      &:hover {
+        background: none;
+        border: none;
+        border-radius: 0;
+        outline: none;
+      }
+
+      @include lg {
+        display: flex;
+      }
+
+      .burger-svg {
+        @include size(100%);
+
+        path {
+          stroke: map-get($burger, fill-color);
+          stroke-width: map-get($burger, stroke-width);
+          transition: map-get($burger, animation-transition);
+
+          &.burger-close {
+            transform: translateX(100%);
+          }
+        }
+      }
+
+      &-active {
+        path {
+          &.burger-icon {
+            stroke: transparent;
+            stroke-width: 0;
+            transform: translateX(-100%);
+          }
+
+          &.burger-close {
+            stroke: map-get($burger, fill-color);
+            stroke-width: map-get($burger, close-stroke-width);
+            transform: translateX(0) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.socials {
+  padding: 0;
+  margin: 15px 0 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include lg {
+    justify-content: center;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  a {
+    padding: 0;
+    @include size(25px);
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-3px);
+
+      svg {
+        fill: $baseThirdly;
+      }
+    }
+  }
+
+  svg {
+    margin: 0;
+    @include size(100%);
+    fill: $baseThirdly;
+    transition: $transition;
+  }
+}
+
+.social-share {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  gap: 10px;
+
+  a {
+    @include size(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    svg {
+      @include size(60%);
+      fill: $baseWhite;
+      transition: $transition;
+    }
+  }
+
+  &-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+
+  &-facebook {
+    background-color: #1877F2;
+  }
+
+  &-youtube {
+    background-color: #E42D26;
+
+    .icon {
+      fill: $baseWhite;
+    }
+  }
+}
+
+#scrollToTop {
+  display: block;
+  padding: 0;
+  margin: 0;
+  opacity: map-get($btn-up, opacity);
+  text-align: center;
+  font-weight: 700;
+  @include size(map-get($btn-up, size));
+  text-decoration: none;
+  position: fixed;
+  bottom: map-get($btn-up, bottom);
+  right: map-get($btn-up, right);
+  z-index: 995;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: map-get($btn-up, border-radius);
+  border: map-get($btn-up, border);
+  background-color: map-get($btn-up, background);
+  outline: none;
+  transition: $transition;
+
+  @include lg {
+    display: none;
+  }
+
+  &:hover {
+    background: map-get($btn-up, hover);
+    opacity: 1;
+  }
+
+  svg {
+    @include size(map-get($btn-up, svg-size));
+    fill: map-get($btn-up, svg-fill);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+}
+
+#scrollToTop.btn-up-active {
+  bottom: map-get($btn-up, active-bottom);
+}
+
+.btn-nav.btn-next {
+  left: initial;
+  right: -90px;
+
+  @include xl {
+    right: -30px;
+  }
+
+  @include xs {
+    right: 0;
+  }
+
+  svg {
+    transform: rotate(-180deg);
+  }
+}
+
+.btn-nav {
+  @include size(25px, 80px);
+  position: absolute;
+  top: 50%;
+  left: -90px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transform: translateY(-50%);
+  background: none;
+  border-radius: 0;
+  z-index: 1;
+
+  @include xl {
+    left: -30px;
+  }
+
+  @include xs {
+    display: none;
+    @include size(20px, 65px);
+    left: 0;
+  }
+
+  &:hover svg {
+    fill: $baseThirdly;
+  }
+
+  svg {
+    @include size(100%);
+    fill: $baseSecondary;
+    transition: $transition;
+  }
+}

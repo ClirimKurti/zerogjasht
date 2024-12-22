@@ -1,0 +1,113 @@
+// TODO Sidebar Form - Styles
+
+.sidebar .standard-form {
+  width: 100%;
+  padding: map-get($sidebar-form, padding-top) map-get($sidebar-form, padding-right) map-get($sidebar-form, padding-bottom) map-get($sidebar-form, padding-left);
+  background-color: map-get($sidebar-form, background);
+  border-radius: map-get($sidebar-form, border-radius);
+  @include sm {
+    padding: map-get($sidebar-form, padding-top) map-get($sidebar-form, padding-right-mobile) map-get($sidebar-form, padding-bottom) map-get($sidebar-form, padding-left-mobile);
+  }
+  &-head {
+    width: 100%;
+    span {
+      width: 100%;
+      display: block;
+      color: map-get($sidebar-form-subtitle, color);
+      font-size: map-get($sidebar-form-subtitle, font-size);
+      font-family: map-get($sidebar-form-subtitle, font-family);
+      text-align: map-get($sidebar-form-subtitle, text-align);
+      font-weight: map-get($sidebar-form-subtitle, font-weight);
+      text-transform: map-get($sidebar-form-subtitle, text-transform);
+      letter-spacing: map-get($sidebar-form-subtitle, letter-spacing);
+      line-height: map-get($sidebar-form-subtitle, line-height);
+      @include sm {
+        font-size: map-get($sidebar-form-subtitle, font-size-mobile);
+      }
+    }
+    h3 {
+      width: 100%;
+      display: block;
+      margin: 0;
+      padding: map-get($sidebar-form-title, margin);
+      color: map-get($sidebar-form-title, color);
+      font-size: map-get($sidebar-form-title, font-size);
+      font-family: map-get($sidebar-form-title, font-family);
+      text-align: map-get($sidebar-form-title, text-align);
+      font-weight: map-get($sidebar-form-title, font-weight);
+      text-transform: map-get($sidebar-form-title, text-transform);
+      letter-spacing: map-get($sidebar-form-title, letter-spacing);
+      line-height: map-get($sidebar-form-title, line-height);
+      @include sm {
+        font-size: map-get($sidebar-form-title, font-size-mobile);
+      }
+    }
+  }
+}
+
+body .lead-form {
+  width: 100%;
+  form {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    br {
+      display: none;
+    }
+    p {
+      margin: 0;
+      width: 100%;
+    }
+    .label, label {
+      width: 100%;
+      display: block;
+      margin: 0 0 15px;
+      input, textarea, select {
+        width: 100%;
+        height: map-get($sidebar-form-inputs, height);
+        padding: 0 15px;
+        display: block;
+        font-family: $baseFont;
+        font-size: map-get($sidebar-form-inputs, font-size);
+        background-color: $baseWhite;
+        color: map-get($sidebar-form-inputs, color);
+        border: none;
+        font-weight: map-get($sidebar-form-inputs, font-weight);
+        &::placeholder {
+          color: map-get($sidebar-form-inputs, color-placeholder);
+        }
+      }
+      textarea {
+        padding: 10px 15px;
+        height: map-get($sidebar-form-inputs, textarea-height);
+        resize: none;
+      }
+    }
+    .wpcf7-not-valid-tip {
+      font-size: map-get($sidebar-form-inputs, errors-font-size);
+      color: map-get($sidebar-form-inputs, errors-color);
+    }
+    .wpcf7-response-output {
+      font-size: map-get($sidebar-form-inputs, info-font-size);
+      margin: 15px 0 0;
+      color: map-get($sidebar-form-inputs, info-color);
+      padding: 10px 15px;
+      text-align: center;
+      border: 2px solid map-get($sidebar-form-inputs, info-color-border);
+    }
+    .submit {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      input {
+        @extend .btn-global;
+        width: 100%;
+        max-width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}

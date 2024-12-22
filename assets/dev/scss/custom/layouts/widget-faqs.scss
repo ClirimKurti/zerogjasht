@@ -1,0 +1,73 @@
+// TODO Widget FAQ's - Styles
+
+.sidebar .faq {
+  &-page-listing {
+    width: 100%;
+    margin-top: -1px;
+    padding: 0 map-get($faq-widget, padding-right) map-get($faq-widget-link, article-margin-bottom) map-get($faq-widget, padding-left);
+    background-color: map-get($faq-widget, background);
+    @include sm {
+      padding: 0 map-get($faq-widget, padding-right-mobile) map-get($faq-widget-link, article-margin-bottom) map-get($faq-widget, padding-left-mobile);
+    }
+    &:last-child {
+      padding: 0 map-get($faq-widget, padding-right) map-get($faq-widget, padding-bottom) map-get($faq-widget, padding-left);
+      border-radius: 0 0 map-get($faq-widget, border-radius) map-get($faq-widget, border-radius);
+      @include sm {
+        padding: 0 map-get($faq-widget, padding-right-mobile) map-get($faq-widget, padding-bottom) map-get($faq-widget, padding-left-mobile);
+      }
+    }
+  }
+  &-page-link {
+    width: 100%;
+    display: block;
+    transition: $transition;
+  }
+  &-page-title {
+    margin: 0 0 map-get($faq-widget-link, margin-bottom);
+    color: map-get($faq-widget-link, color);
+    font-size: map-get($faq-widget-link, font-size);
+    font-family: map-get($faq-widget-link, font-family);
+    font-weight: map-get($faq-widget-link, font-weight);
+    line-height: map-get($faq-widget-link, line-height);
+    letter-spacing: map-get($faq-widget-link, letter-spacing);
+    text-transform: map-get($faq-widget-link, text-transform);
+    transition: $transition;
+    &:hover {
+      color: map-get($faq-widget-link, hover);
+    }
+    @include sm {
+      font-size: map-get($faq-widget-link, font-size-mobile);
+    }
+  }
+  &-page-thumb {
+    @include size(100%, map-get($faq-widget-link, thumb-height));
+    @include xs {
+      @include size(100%, map-get($faq-widget-link, thumb-height-mobile))
+    }
+    img {
+      @include size(100%);
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}
+
+body .sidebar {
+  .widget-title-faq {
+    margin: 0;
+    padding: map-get($faq-widget, padding-top) map-get($faq-widget, padding-right) map-get($faq-widget-title, margin-bottom) map-get($faq-widget, padding-left);
+    font-size: map-get($faq-widget-title, font-size);
+    color: map-get($faq-widget-title, color);
+    line-height: map-get($faq-widget-title, line-height);
+    letter-spacing: map-get($faq-widget-title, letter-spacing);
+    font-family: map-get($faq-widget-title, font-family);
+    font-weight: map-get($faq-widget-title, font-weight);
+    background-color: map-get($faq-widget, background);
+    border-radius: map-get($faq-widget, border-radius) map-get($faq-widget, border-radius) 0 0;
+    @include sm {
+      padding: map-get($faq-widget, padding-top) map-get($faq-widget, padding-right-mobile) map-get($faq-widget-title, margin-bottom) map-get($faq-widget, padding-left-mobile);
+      font-size: map-get($faq-widget-title, font-size-mobile);
+    }
+  }
+}

@@ -1,0 +1,335 @@
+// TODO Genesis Navigation - Styles
+
+.genesis-nav-menu {
+  width: 100%;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @include lg {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  a[href="#"] {
+    cursor: default;
+  }
+
+  li {
+    position: relative;
+    list-style-type: none;
+
+    a {
+      font-family: map-get($menu-desktop, font-family);
+    }
+  }
+
+  >li {
+    position: relative;
+    z-index: 2;
+    border-left: 1px solid #d2d2d2;
+    padding: 0 15px;
+    transition: $transition;
+
+    &:last-child {
+      border-right: 1px solid #d2d2d2;
+      padding-right: 5px;
+    }
+
+    @media (min-width: 1200px) {
+
+      &:hover::after {
+        pointer-events: initial;
+      }
+
+      &::after {
+        @include size(100%, 10px);
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        display: block;
+        pointer-events: none;
+      }
+    }
+
+    @include lg {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $red;
+
+      >a {
+        color: map-get($menu-desktop, link-hover);
+
+        @include lg {
+          color: map-get($menu-mobile, link-color);
+        }
+      }
+    }
+
+    >a {
+      font-family: $titleFont;
+      padding: 8px 0;
+      color: map-get($menu-desktop, link-color);
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: map-get($menu-desktop, link-text-transform);
+      line-height: map-get($menu-desktop, line-height);
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      letter-spacing: map-get($menu-desktop, link-letter-spacing);
+
+      @include lg {
+        color: map-get($menu-mobile, link-color);
+        font-size: map-get($menu-mobile, link-font-size);
+        font-weight: map-get($menu-mobile, link-font-weight);
+        text-transform: map-get($menu-mobile, link-text-transform);
+        letter-spacing: map-get($menu-mobile, link-letter-spacing);
+        padding: 15px;
+        display: inline-block;
+        width: 100%;
+        justify-content: flex-start;
+        background-color: transparent;
+      }
+    }
+  }
+
+  li.menu-item-has-children {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%) rotate(-45deg);
+      right: 15px;
+      z-index: 1;
+      pointer-events: none;
+      @include size(10px);
+      border: solid map-get($menu-desktop, link-color);
+      border-width: 0 map-get($menu-desktop, link-arrow-weight) map-get($menu-desktop, link-arrow-weight) 0;
+      display: inline-block;
+      padding: 2px;
+      transition: $transition;
+
+      @include lg {
+        border: solid map-get($menu-mobile, link-color);
+        border-width: 0 map-get($menu-mobile, link-arrow-weight) map-get($menu-mobile, link-arrow-weight) 0;
+        transform: rotate(45deg);
+        top: 17px;
+        right: 23px;
+      }
+    }
+
+    >a {
+      @include lg {
+        width: max-content;
+      }
+    }
+  }
+
+  >li.current-menu-item {
+    >a {
+      color: $red;
+
+      @include lg {
+        color: $red;
+      }
+
+      &:hover {
+        color: map-get($menu-desktop, link-hover);
+
+        @include lg {
+          color: map-get($menu-mobile, link-active);
+        }
+      }
+    }
+  }
+
+  >li.menu-item-has-children {
+    @media (min-width: 1200px) {
+      margin: 0 25px 0 5px;
+
+      &:hover>ul {
+        opacity: 1;
+        pointer-events: initial;
+        transform: translateY(0);
+      }
+
+      li.menu-item-has-children {
+        &:hover>ul {
+          opacity: 1;
+          pointer-events: initial;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @media (min-width: 1400px) {
+      margin: 0 25px 0 15px;
+    }
+
+    &::before {
+      transform: translateY(-45%) rotate(45deg) scale(.7);
+      right: -15px;
+
+      @include lg {
+        transform: rotate(45deg);
+        top: 17px;
+        right: 23px;
+      }
+    }
+
+    &:hover::before {
+      @media (min-width: 1200px) {
+        top: 55%;
+        transform: translateY(-45%) rotate(-135deg) scale(.7);
+      }
+    }
+  }
+
+  .sub-menu {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+    width: map-get($sub-menu, width);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    flex-wrap: wrap;
+    background-color: map-get($sub-menu, background);
+    box-shadow: map-get($sub-menu, box-shadow);
+    z-index: -1;
+    transition: $transition;
+    transform: translateY(10px);
+
+    @include lg {
+      pointer-events: initial;
+      background-color: map-get($menu-mobile, background);
+      border-bottom: none;
+      padding: 0 0 10px 10px;
+      margin: 0;
+      box-shadow: none;
+      position: static;
+      width: 100%;
+      visibility: visible;
+      opacity: 1;
+      display: none;
+      top: initial;
+      left: initial;
+      transform: initial;
+      transition: initial;
+    }
+
+    li {
+      @media (min-width: 1200px) {
+        width: 100%;
+
+        &:first-child {
+          margin-top: 10px;
+        }
+
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    li.menu-item-has-children {
+      &::before {
+        top: 17px;
+        right: 10px;
+        border: solid map-get($sub-menu, link-color);
+        border-width: 0 map-get($sub-menu, link-arrow-weight) map-get($sub-menu, link-arrow-weight) 0;
+        @include size(8px);
+
+        @include lg {
+          border-width: 0 map-get($menu-mobile, link-arrow-weight) map-get($menu-mobile, link-arrow-weight) 0;
+          border-color: map-get($menu-mobile, link-color);
+          right: 22px;
+          top: 15px;
+        }
+      }
+    }
+
+    li.current-menu-item {
+      >a {
+        color: map-get($sub-menu, link-hover);
+      }
+    }
+
+    a {
+      width: 100%;
+      padding: 8px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: map-get($sub-menu, link-color);
+      text-transform: map-get($sub-menu, link-text-transform);
+      font-weight: map-get($sub-menu, link-font-weight);
+      font-family: $titleFont;
+      border: none;
+      line-height: 1.2;
+      font-size: map-get($sub-menu, link-font-size);
+      letter-spacing: map-get($sub-menu, link-letter-spacing);
+
+      &:hover {
+        @media (min-width: 1200px) {
+          color: map-get($sub-menu, link-hover);
+        }
+      }
+
+      @include lg {
+        font-size: map-get($menu-mobile, sub-link-font-size);
+        color: map-get($menu-mobile, link-color);
+        font-weight: map-get($menu-mobile, sub-link-font-weight);
+        text-transform: map-get($menu-mobile, sub-link-text-transform);
+        letter-spacing: map-get($menu-mobile, sub-link-letter-spacing);
+        width: 100%;
+        padding: 15px;
+
+        &:hover {
+          color: map-get($menu-mobile, link-color);
+        }
+      }
+    }
+
+    .sub-menu {
+      width: map-get($sub-menu, sub-menu-width);
+      top: -10px;
+      left: 100%;
+      margin: 0;
+      z-index: 10;
+
+      @include lg {
+        width: 100%;
+      }
+
+      li {
+        width: 100%;
+      }
+
+      @include lg {
+        display: none;
+        top: initial;
+        left: initial;
+      }
+    }
+  }
+}

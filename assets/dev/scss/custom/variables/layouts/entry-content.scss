@@ -1,0 +1,102 @@
+// TODO Content Main Styles - Variables
+
+$titles: (
+    margin: 40px 0 30px,
+    font-family: $titleFont,
+    line-height: 1.1,
+    line-height-mobile: 1.2,
+    font-weight: bold,
+);
+
+$h2: (
+    font-size: 40px,
+    font-size-mobile: 35px,
+    color: $basePrimary,
+);
+
+$h3: (
+    font-size: 36px,
+    font-size-mobile: 32px,
+    color: $baseBlack,
+);
+
+$h4: (
+    font-size: 32px,
+    font-size-mobile: 28px,
+    color: $baseBlack,
+);
+
+$h5: (
+    font-size: 28px,
+    font-size-mobile: 24px,
+    color: $baseBlack,
+);
+
+$h6: (
+    font-size: 24px,
+    font-size-mobile: 20px,
+    color: $baseBlack,
+);
+
+$thumbnail: (
+    max-width: 250px,
+    max-width-mobile: 180px,
+    float: right,
+    margin: 0 0 10px 10px,
+    margin-mobile: 0 0 30px,
+);
+
+$images: (
+    margin: 0,
+    margin-mobile: 0,
+    align-left-margin: 0 15px 10px 0,
+    align-right-margin: 0 0 10px 15px,
+    align-center-margin: 30px auto,
+);
+
+$link: (
+    color: $baseSecondary,
+    hover: $baseThirdly,
+    font-weight: 500,
+);
+
+$p: (
+    margin: 30px 0,
+    color: $baseBlack,
+    font-size: 18px,
+    font-size-mobile: 16px,
+    line-height: 1.8,
+    line-height-mobile: 1.6,
+);
+
+$ul-ol: (
+    margin: 30px 0,
+    li-margin: 0 0 10px,
+    li-color: $baseBlack,
+    font-size: 18px,
+    font-size-mobile: 16px,
+    line-height: 1.8,
+    line-height-mobile: 1.6,
+);
+
+$iframe: (
+    margin: 0,
+    height: 500px,
+    height-xl: 450px,
+    height-lg: 520px,
+    height-md: 370px,
+    height-sm: 320px,
+    height-xs: 220px,
+    // TODO If Title widget active
+    toc-height: 350px,
+    toc-height-xl: 300px,
+    toc-height-lg: 520px,
+    toc-height-md: 370px,
+    toc-height-sm: 320px,
+    toc-height-xs: 220px,
+);
+
+$hr: (
+    color: $basePrimary,
+    border-width: 1px,
+);

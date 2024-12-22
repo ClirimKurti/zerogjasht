@@ -1,0 +1,18 @@
+// TODO Widgets CTA & Attorney - Variables
+
+$widget_cta: (
+  margin: 0 0 14px,
+  font-size: 21px,
+  color: $baseBlack,
+  text-align: center,
+  line-height: 1.5,
+);
+
+$widget_attorney: (
+    sub-title-font-size: 12px,
+    sub-title-color: $baseBlack,
+    title-font-size: 21px,
+    title-color: $baseBlack,
+    date-title-font-size: 16px,
+    date-title-color: $baseBlack,
+);

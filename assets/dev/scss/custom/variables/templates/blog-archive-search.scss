@@ -1,0 +1,32 @@
+// TODO Blog/Archive/Search Templates - Variables
+
+$articles-margin-bottom: 50px;
+
+$post-title: (
+    margin-bottom: 10px,
+    font-family: $titleFont,
+    color: $baseSecondary,
+    color-hover: $baseThirdly,
+    font-size: 32px,
+    font-size-mobile: 28px,
+    line-height: 1,
+    font-weight: 700,
+);
+
+$post-meta: (
+    margin: 0 0 10px,
+    font-size: 16px,
+    font-size-mobile: 15px,
+    font-weight: 400,
+    color: $baseBlack,
+    color-link: $basePrimary,
+    hover-link: $baseThirdly,
+    font-weight-link: 500,
+);
+
+$post-text: (
+    font-size: 16px,
+    font-weight: 400,
+    line-height: 1.7,
+    color: $baseBlack,
+);

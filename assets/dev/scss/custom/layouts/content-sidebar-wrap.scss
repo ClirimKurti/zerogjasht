@@ -1,0 +1,52 @@
+// TODO Main templates styles
+body {
+  .content-sidebar-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    main {
+      width: map-get($grid, main-width);
+      padding-bottom: 30px;
+      @include lg {
+        width: 100%;
+      }
+    }
+    aside {
+      width: map-get($grid, aside-width);
+      padding-left: map-get($grid, aside-padding);
+      padding-bottom: 30px;
+      @include lg {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+  &.full-width-content {
+    .content-sidebar-wrap {
+      main {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.site-container {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+// TODO Sticky footer
+body:not(.home) {
+  .site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .site-inner {
+      flex-grow: 2;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto;
+    }
+  }
+}

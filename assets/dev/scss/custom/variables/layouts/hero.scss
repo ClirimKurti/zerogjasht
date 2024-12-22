@@ -1,0 +1,27 @@
+// TODO Hero - Variables
+
+$hero: (
+    min-height: 350px,
+    padding: 50px 0,
+    justify-content: center,
+    align-items: flex-start,
+    background-color: $baseSecondary,
+);
+
+$hero-title: (
+    max-width: 85%,
+    color: $baseWhite,
+    margin: 0 0 10px,
+    font-family: $titleFont,
+    font-weight: 700,
+    letter-spacing: normal,
+    line-height: 1,
+    font-size: 60px,
+    font-size-mobile: 45px,
+);
+
+$hero-text: (
+    margin: 0 0 20px,
+    font-size: 18px,
+    color: $baseWhite,
+);

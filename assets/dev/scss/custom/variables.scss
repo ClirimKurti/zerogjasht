@@ -1,0 +1,52 @@
+// TODO -- Variables Global --
+
+// TODO Base Colors
+$baseWhite: #ffffff;
+$baseBlack: #000000;
+$baseGray: #f1f1f1f1;
+$gray: #d2d2d26b;
+$darkGray: #666666;
+$basePrimary: #4872d1;
+$baseSecondary: #244692;
+$baseThirdly: #c00;
+$red: #c00;
+$links: #3160BB;
+$boyle: #194B79;
+$coolBlack: #0F1217;
+$coolWhite: #EFF4FF;
+$coolGray: #B9C7DD;
+$Grayscale: #D7E2F3;
+$blueCool: #3EA3FF;
+$lightBlue: #3E93E1;
+
+// TODO Base Fonts
+$baseFont: 'Lora', sans-serif;
+$titleFont: 'Oswald', sans-serif;
+
+// TODO Base transitions
+$transition: all .3s ease-in-out;
+
+// TODO Base Text Shadow
+$shadowText: 2px 2px 0 #020202, 0 0 57px rgba(0, 0, 0, .2);
+$shadowBox: 0 0 8px 0 rgba(34, 60, 80, 0.2);
+
+// TODO Layouts Variables
+@import "variables/layouts/header";
+@import "variables/layouts/breadcrumbs";
+@import "variables/layouts/buttons";
+@import "variables/layouts/hero";
+@import "variables/layouts/content-sidebar-wrap";
+@import "variables/layouts/entry-content";
+@import "variables/layouts/cta";
+@import "variables/layouts/widget-default";
+@import "variables/layouts/widget-faqs";
+@import "variables/layouts/widget-title-scroll";
+@import "variables/layouts/widgets-cta-attorney";
+@import "variables/layouts/sidebar-form";
+@import "variables/layouts/related-articles";
+@import "variables/layouts/pagination";
+@import "variables/layouts/address-shortcode";
+
+// TODO Templates Variables
+@import "variables/templates/blog-archive-search";
+@import "variables/templates/page-faqs";

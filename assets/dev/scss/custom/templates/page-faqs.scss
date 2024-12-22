@@ -1,0 +1,171 @@
+// TODO FAQ's Template - Styles
+
+body:not(.home) .entry-content .faq {
+  &-wrap {
+    width: 100%;
+  }
+  &-filter-terms {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: map-get($faqs-filter, padding);
+    border-top: map-get($faqs-filter, border-width) solid map-get($faqs-filter, border-color);
+    border-bottom: map-get($faqs-filter, border-width) solid map-get($faqs-filter, border-color);
+    a {
+      font-size: map-get($faqs-filter, link-font-size);
+      display: inline-block;
+      margin: map-get($faqs-filter, link-margin);
+      color: map-get($faqs-filter, link-color);
+      font-family: map-get($faqs-filter, link-font-family);
+      font-weight: map-get($faqs-filter, link-font-weight);
+      letter-spacing: map-get($faqs-filter, link-letter-spacing);
+      line-height: 1.4;
+      &:hover {
+        color: map-get($faqs-filter, link-hover);
+      }
+      @include sm {
+        margin: map-get($faqs-filter, link-margin-mobile);
+        font-size: map-get($faqs-filter, link-font-size-mobile);
+      }
+      &.faq-filter-active {
+        color: map-get($faqs-filter, link-active);
+        font-weight: map-get($faqs-filter, link-active-font-weight);
+      }
+    }
+  }
+  &-page-items {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: calc(100% + #{map-get($faqs-grid, gap)});
+    @include lg {
+      width: calc(100% + #{map-get($faqs-grid, gap-lg)});
+    }
+    @include md {
+      width: calc(100% + #{map-get($faqs-grid, gap-md)});
+    }
+    @include sm {
+      width: calc(100% + #{map-get($faqs-grid, gap-sm)});
+    }
+    @include xs {
+      width: 100%;
+    }
+  }
+  &-page-item {
+    display: flex;
+    border: 1px solid map-get($faqs-article, border-color);
+    width: 100%;
+    overflow: hidden;
+    list-style-type: none;
+    box-shadow: map-get($faqs-article, box-shadow);
+    border-radius: map-get($faqs-article, border-radius);
+    background-color: map-get($faqs-article, background);
+    @if (map-get($faqs-grid, cols)) == 4 {
+      width: calc(25% - #{map-get($faqs-grid, gap)});
+      margin: 0 map-get($faqs-grid, gap) map-get($faqs-grid, gap) 0;
+    } @else if (map-get($faqs-grid, cols)) == 3 {
+      width: calc(33.3333% - #{map-get($faqs-grid, gap)});
+      margin: 0 map-get($faqs-grid, gap) map-get($faqs-grid, gap) 0;
+    } @else if (map-get($faqs-grid, cols)) == 2 {
+      width: calc(50% - #{map-get($faqs-grid, gap)});
+      margin: 0 map-get($faqs-grid, gap) map-get($faqs-grid, gap) 0;
+    } @else if (map-get($faqs-grid, cols)) == 1 {
+      width: 100%;
+      margin: 0 0 map-get($faqs-grid, gap) 0;
+    }
+    @include lg {
+      @if (map-get($faqs-grid, cols-lg)) == 4 {
+        width: calc(25% - #{map-get($faqs-grid, gap-lg)});
+        margin: 0 map-get($faqs-grid, gap-lg) map-get($faqs-grid, gap-lg) 0;
+      } @else if (map-get($faqs-grid, cols-lg)) == 3 {
+        width: calc(33.3333% - #{map-get($faqs-grid, gap-lg)});
+        margin: 0 map-get($faqs-grid, gap-lg) map-get($faqs-grid, gap-lg) 0;
+      } @else if (map-get($faqs-grid, cols-lg)) == 2 {
+        width: calc(50% - #{map-get($faqs-grid, gap-lg)});
+        margin: 0 map-get($faqs-grid, gap-lg) map-get($faqs-grid, gap-lg) 0;
+      } @else if (map-get($faqs-grid, cols-lg)) == 1 {
+        width: 100%;
+        margin: 0 0 map-get($faqs-grid, gap-lg) 0;
+      }
+    }
+    @include md {
+      @if (map-get($faqs-grid, cols-md)) == 4 {
+        width: calc(25% - #{map-get($faqs-grid, gap-md)});
+        margin: 0 map-get($faqs-grid, gap-md) map-get($faqs-grid, gap-md) 0;
+      } @else if (map-get($faqs-grid, cols-md)) == 3 {
+        width: calc(33.3333% - #{map-get($faqs-grid, gap-md)});
+        margin: 0 map-get($faqs-grid, gap-md) map-get($faqs-grid, gap-md) 0;
+      } @else if (map-get($faqs-grid, cols-md)) == 2 {
+        width: calc(50% - #{map-get($faqs-grid, gap-md)});
+        margin: 0 map-get($faqs-grid, gap-md) map-get($faqs-grid, gap-md) 0;
+      } @else if (map-get($faqs-grid, cols-md)) == 1 {
+        width: 100%;
+        margin: 0 0 map-get($faqs-grid, gap) 0;
+      }
+    }
+    @include sm {
+      @if (map-get($faqs-grid, cols-sm)) == 4 {
+        width: calc(25% - #{map-get($faqs-grid, gap-sm)});
+        margin: 0 map-get($faqs-grid, gap-sm) map-get($faqs-grid, gap-sm) 0;
+      } @else if (map-get($faqs-grid, cols-sm)) == 3 {
+        width: calc(33.3333% - #{map-get($faqs-grid, gap-sm)});
+        margin: 0 map-get($faqs-grid, gap-sm) map-get($faqs-grid, gap-sm) 0;
+      } @else if (map-get($faqs-grid, cols-sm)) == 2 {
+        width: calc(50% - #{map-get($faqs-grid, gap-sm)});
+        margin: 0 map-get($faqs-grid, gap-sm) map-get($faqs-grid, gap-sm) 0;
+      } @else if (map-get($faqs-grid, cols-sm)) == 1 {
+        width: 100%;
+        margin: 0 0 map-get($faqs-grid, gap-sm) 0;
+      }
+    }
+    @include xs {
+      width: 100%;
+      margin: 0 0 map-get($faqs-grid, xs-margin-bottom) 0;
+    }
+    &:hover {
+      h2 {
+        color: map-get($faqs-article, title-hover);
+      }
+    }
+  }
+  &-page-link {
+    @include size(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-page-thumb {
+    @include size(100%, map-get($faqs-article, thumb-height));
+    overflow: hidden;
+    border-radius: 0 0 map-get($faqs-article, border-radius) map-get($faqs-article, border-radius);
+    @include xs {
+      @include size(100%, map-get($faqs-article, thumb-height-mobile));
+    }
+    img {
+      @include size(100%);
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+      transition: $transition;
+    }
+  }
+  &-page-title {
+    font-size: map-get($faqs-article, title-font-size);
+    margin: 0;
+    padding: map-get($faqs-article, title-padding);
+    line-height: map-get($faqs-article, title-line-height);
+    color: map-get($faqs-article, title-color);
+    font-family: map-get($faqs-article, title-font-family);
+    font-weight: map-get($faqs-article, title-font-weight);
+    letter-spacing: map-get($faqs-article, title-letter-spacing);
+    transition: $transition;
+    @include sm {
+      font-size: map-get($faqs-article, title-font-size-mobile);
+      padding: map-get($faqs-article, title-padding-mobile);
+    }
+  }
+}

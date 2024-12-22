@@ -1,0 +1,32 @@
+// TODO Related Articles Styles - Variables
+
+$related-section: (
+    margin-top: 50px,
+    padding-top: 30px,
+    border-top: 1px solid $baseSecondary,
+);
+
+$related-title: (
+    margin: 0 0 40px,
+    font-family: $titleFont,
+    font-weight: 700,
+    font-size: 36px,
+    color: $baseSecondary,
+    line-height: 1.1,
+    letter-spacing: normal,
+);
+
+$related-article: (
+    thumb-size: 140px,
+    thumb-mobile-hegiht: 240px,
+    thumb-mobile-margin-bottom: 240px,
+    title-font-size: 22px,
+    title-line-height: 1.1,
+    title-font-family: $baseFont,
+    title-font-weight: 700,
+    title-color: $basePrimary,
+    title-hover: $baseThirdly,
+    text-font-size: 16px,
+    text-line-height: 1.6,
+    text-color: $baseBlack,
+)

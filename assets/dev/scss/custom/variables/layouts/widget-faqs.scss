@@ -1,0 +1,39 @@
+// TODO FAQ's Widget Styles - Variables
+
+$faq-widget: (
+    padding-top: 40px,
+    padding-bottom: 45px,
+    padding-left: 20px,
+    padding-right: 20px,
+    padding-left-mobile: 15px,
+    padding-right-mobile: 15px,
+    background: $baseSecondary,
+    border-radius: 0
+);
+
+$faq-widget-title: (
+    margin-bottom: 35px,
+    font-family: $titleFont,
+    color: $baseWhite,
+    font-size: 36px,
+    font-size-mobile: 32px,
+    line-height: 1.1,
+    font-weight: bold,
+    letter-spacing: normal
+);
+
+$faq-widget-link: (
+    margin-bottom: 10px,
+    font-family: $titleFont,
+    font-size: 20px,
+    font-size-mobile: 18px,
+    color: $baseWhite,
+    hover: $baseThirdly,
+    font-weight: normal,
+    text-transform: capitalize,
+    letter-spacing: normal,
+    line-height: 1.3,
+    thumb-height: 250px,
+    thumb-height-mobile: 250px,
+    article-margin-bottom: 30px
+);

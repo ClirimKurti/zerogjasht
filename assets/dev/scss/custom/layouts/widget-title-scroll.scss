@@ -1,0 +1,89 @@
+// TODO Widget Title Scroll - Styles
+
+body:not(.home) {
+  &.admin-bar {
+    .content-sidebar-wrap {
+      #blogSidebar.sidebar-active {
+        top: map-get($widget-titles, position-start-top-admin-bar);
+      }
+      #blogSidebar.sidebar-active-bottom {
+        bottom: map-get($widget-titles, position-stop-bottom-admin-bar);
+        top: initial;
+      }
+    }
+  }
+  .blogSidebar {
+    display: flex;
+    flex-direction: column;
+    width: calc(#{map-get($widget-titles, width)} - 15px);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    @include xxl {
+      width: calc(#{map-get($widget-titles, width-xxl)} - 15px);
+    }
+    @include lg {
+      display: none;
+    }
+    &-main {
+      width: 100%;
+    }
+    div.contents {
+      margin: 0 0 map-get($widget-titles-title, margin-bottom);
+      font-size: map-get($widget-titles-title, font-size);
+      text-transform: map-get($widget-titles-title, text-transform);
+      font-family: map-get($widget-titles-title, font-family);
+      color: map-get($widget-titles-title, color);
+      font-weight: map-get($widget-titles-title, font-weight);
+      letter-spacing: map-get($widget-titles-title, letter-spacing);
+      line-height: map-get($widget-titles-title, line-height);
+    }
+    ol {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style-type: none;
+      }
+    }
+    span {
+      margin-bottom: map-get($widget-titles-link, margin-bottom);
+      width: 100%;
+      text-align: left;
+      display: block;
+      cursor: pointer;
+      user-select: none;
+      font-size: map-get($widget-titles-link, font-size);
+      color: map-get($widget-titles-link, color);
+      text-transform: map-get($widget-titles-link, text-transform);
+      font-family: map-get($widget-titles-link, font-family);
+      font-weight: map-get($widget-titles-link, font-weight);
+      letter-spacing: map-get($widget-titles-link, letter-spacing);
+      line-height: map-get($widget-titles-link, line-height);
+      transition: $transition;
+      &:hover {
+        color: map-get($widget-titles-link, color-hover);
+      }
+    }
+    .scrollToElements.active{
+      color: map-get($widget-titles-link, color-active);
+    }
+  }
+  #blogSidebar.sidebar-active {
+    position: fixed;
+    top: map-get($widget-titles, position-start-top);
+  }
+  #blogSidebar.sidebar-active-bottom {
+    position: absolute;
+    bottom: map-get($widget-titles, position-stop-bottom);
+    top: initial;
+  }
+  .toc-active {
+    padding-left: map-get($widget-titles, width);
+    @include xxl {
+      padding-left: map-get($widget-titles, width-xxl);
+    }
+    @include lg {
+      padding-left: 0;
+    }
+  }
+}

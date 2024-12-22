@@ -1,0 +1,52 @@
+// TODO Blog/Archive/Search Templates - Styles
+
+body.search,
+body.archive,
+body.blog {
+  .content {
+    .post, .page {
+      width: 100%;
+      margin-bottom: $articles-margin-bottom;
+      h2 {
+        margin: 0 0 map-get($post-title, margin-bottom);
+        a {
+          font-size: map-get($post-title, font-size);
+          font-family: map-get($post-title, font-family);
+          font-weight: map-get($post-title, font-weight);
+          color: $baseBlack;
+          line-height: map-get($post-title, line-height);
+          @include sm {
+            font-size: map-get($post-title, font-size-mobile);
+          }
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+      p.entry-meta {
+        margin: map-get($post-meta, margin);
+        font-size: map-get($post-meta, font-size);
+        line-height: 1.6;
+        color: map-get($post-meta, color);
+        font-weight: map-get($post-meta, font-weight);
+        @include sm {
+          font-size: map-get($post-meta, font-size-mobile);
+        }
+        a {
+          color: map-get($post-meta, color-link);
+          font-weight: map-get($post-meta, font-weight-link);
+          &:hover {
+            color: map-get($post-meta, hover-link)
+          }
+        }
+      }
+      p:not(.entry-meta) {
+        margin: 0;
+        font-size: map-get($post-text, font-size);
+        font-weight: map-get($post-text, font-weight);
+        line-height: map-get($post-text, line-height);
+        color: map-get($post-text, color);
+      }
+    }
+  }
+}

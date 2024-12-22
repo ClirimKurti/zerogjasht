@@ -1,0 +1,33 @@
+// TODO Buttons Main Styles - Variables
+
+$btn-global: (
+  padding: 0 30px,
+  height: 50px,
+  min-width: 280px,
+  font-size: 16px,
+  text-transform: uppercase,
+  font-weight: 500,
+  font-family: $baseFont,
+  letter-spacing: 0,
+  border-radius: 0,
+  border: none,
+  background: $basePrimary,
+  color: $baseWhite,
+  hover: $baseThirdly,
+  hover-background: $basePrimary,
+);
+
+$btn-up: (
+  size: 35px,
+  opacity: .5,
+  background: $basePrimary,
+  border-radius: 50%,
+  border: 1.6px solid $baseWhite,
+  hover: $baseThirdly,
+  svg-size: 12px,
+  svg-fill: $baseWhite,
+  // TODO Position
+  bottom: -100px,
+  right: 105px,
+  active-bottom: 25px,
+);

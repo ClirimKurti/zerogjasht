@@ -1,0 +1,89 @@
+// TODO 404 Page - Styles
+.search-results {
+  .widget-wrap .search-form {
+    display: none;
+  }
+}
+
+body.error404 .entry {
+  h2 {
+    font-size: map-get($h2, font-size);
+    color: $boyle;
+    margin: 0 0 30px;
+    font-family: map-get($titles, font-family);
+    line-height: map-get($titles, line-height);
+    font-weight: map-get($titles, font-weight);
+
+    @include sm {
+      font-size: map-get($h2, font-size-mobile);
+      line-height: map-get($titles, line-height-mobile);
+    }
+  }
+
+  p {
+    margin: map-get($p, font-margin);
+    font-size: map-get($p, font-size);
+    color: map-get($p, font-color);
+    line-height: map-get($p, line-height);
+
+    a {
+      color: map-get($link, color);
+      font-weight: map-get($link, font-weight);
+
+      &:hover {
+        color: map-get($link, hover);
+      }
+    }
+  }
+}
+
+body .search-form {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    width: calc(100% - 230px);
+    display: block;
+
+    @include xs {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input.search-form-input {
+      width: 100%;
+
+      @include xs {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .search-form-input {
+    display: block;
+    width: calc(100% - 230px);
+    height: 50px;
+    padding: 0 30px;
+    border: 1px solid $baseGray;
+    border-radius: 0;
+    font-size: 16px;
+    outline: none;
+    font-family: $baseFont;
+
+    @include xs {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .search-form-submit {
+    @extend .btn-global;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 200px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,308 @@
+// TODO Entry Content Toc Active - Styles
+
+body:not(.home) .toc-active .entry-content {
+  iframe {
+    @include size(100%, map-get($iframe, toc-height));
+
+    @include xl {
+      height: map-get($iframe, toc-height-xl);
+    }
+
+    @include lg {
+      height: map-get($iframe, toc-height-lg);
+    }
+
+    @include md {
+      height: map-get($iframe, toc-height-md);
+    }
+
+    @include sm {
+      height: map-get($iframe, toc-height-sm);
+    }
+
+    @include xs {
+      height: map-get($iframe, toc-height-xs);
+    }
+  }
+}
+
+// TODO Entry Content By Default - Styles
+body:not(.home) .entry-content>div,
+body:not(.home) .entry-content {
+  >*:first-child:not(img.wp-post-image) {
+    margin: 0 0 30px;
+  }
+
+  >img.wp-post-image:first-child {
+    float: map-get($thumbnail, float);
+    margin: map-get($thumbnail, margin);
+    max-width: map-get($thumbnail, max-width);
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+
+    @include sm {
+      max-width: map-get($thumbnail, max-width-mobile);
+    }
+
+    @include xs {
+      width: 100%;
+      max-width: 100%;
+      margin: map-get($thumbnail, margin-mobile);
+    }
+
+    +* {
+      margin: 0 0 30px;
+    }
+  }
+
+  img {
+    margin: map-get($images, margin);
+
+    @include xs {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: map-get($images, margin-mobile);
+    }
+  }
+
+  .alignleft {
+    float: left;
+    margin: map-get($images, align-left-margin);
+  }
+
+  .alignright {
+    float: right;
+    margin: map-get($images, align-right-margin);
+  }
+
+  .aligncenter,
+  .alignnone {
+    display: block;
+    margin: map-get($images, align-center-margin);
+  }
+
+  .alignleft,
+  .alignright,
+  .aligncenter,
+  .alignnone {
+    @include xs {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: map-get($images, margin-mobile);
+      float: initial;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: map-get($titles, margin);
+    font-family: map-get($titles, font-family);
+    line-height: map-get($titles, line-height);
+    font-weight: map-get($titles, font-weight);
+
+    @include sm {
+      line-height: map-get($titles, line-height-mobile);
+    }
+  }
+
+  h2 {
+    font-size: map-get($h2, font-size);
+    color: map-get($h2, color);
+
+    @include sm {
+      font-size: map-get($h2, font-size-mobile);
+    }
+  }
+
+  h3 {
+    font-size: map-get($h3, font-size);
+    color: map-get($h3, color);
+
+    @include sm {
+      font-size: map-get($h3, font-size-mobile);
+    }
+  }
+
+  h4 {
+    color: map-get($h4, color);
+    font-size: map-get($h4, font-size);
+
+    @include sm {
+      font-size: map-get($h4, font-size-mobile);
+    }
+  }
+
+  h5 {
+    color: map-get($h5, color);
+    font-size: map-get($h5, font-size);
+
+    @include sm {
+      font-size: map-get($h5, font-size-mobile);
+    }
+  }
+
+  h6 {
+    color: map-get($h6, color);
+    font-size: map-get($h6, font-size);
+
+    @include sm {
+      font-size: map-get($h6, font-size-mobile);
+    }
+  }
+
+  p:not(.rs-content-cta) {
+    margin: map-get($p, font-margin);
+    font-size: map-get($p, font-size);
+    color: map-get($p, color);
+    line-height: map-get($p, line-height);
+
+  }
+
+  ul,
+  ol {
+    margin: map-get($ul-ol, margin);
+
+    li {
+      margin: map-get($ul-ol, li-margin);
+      font-size: map-get($ul-ol, font-size);
+      line-height: map-get($ul-ol, line-height);
+      color: map-get($ul-ol, li-color);
+
+      @include sm {
+        font-size: map-get($ul-ol, font-size-mobile);
+        line-height: map-get($ul-ol, line-height-mobile);
+      }
+    }
+  }
+
+  p:not(.rs-content-cta),
+  ol,
+  ul {
+    a {
+      color: map-get($link, color);
+      font-weight: map-get($link, font-weight);
+
+      &:hover {
+        color: map-get($link, hover);
+      }
+    }
+  }
+
+  hr {
+    background-color: map-get($hr, color);
+    height: map-get($hr, border-width);
+    border: 0;
+  }
+
+  iframe {
+    @include size(100%, map-get($iframe, height));
+    display: block;
+    border: none;
+    border-radius: 0;
+    margin: map-get($iframe, margin);
+
+    @include xl {
+      height: map-get($iframe, height-xl);
+    }
+
+    @include lg {
+      height: map-get($iframe, height-lg);
+    }
+
+    @include md {
+      height: map-get($iframe, height-md);
+    }
+
+    @include sm {
+      height: map-get($iframe, height-sm);
+    }
+
+    @include xs {
+      height: map-get($iframe, height-xs);
+    }
+  }
+}
+
+body:not(.home) .content-sidebar-wrap .entry-content {
+  p {
+    @include sm {
+      font-size: map-get($p, font-size-mobile);
+      line-height: map-get($p, line-height-mobile);
+    }
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: map-get($titles, margin);
+  font-family: map-get($titles, font-family);
+  line-height: map-get($titles, line-height);
+  font-weight: map-get($titles, font-weight);
+
+  @include sm {
+    line-height: map-get($titles, line-height-mobile);
+  }
+}
+
+h2 {
+  font-size: 30px;
+  color: $baseBlack;
+  margin: 5px;
+
+  @include sm {
+    font-size: 25px;
+  }
+}
+
+h3 {
+  font-size: map-get($h3, font-size);
+  color: map-get($h3, color);
+
+  @include sm {
+    font-size: map-get($h3, font-size-mobile);
+  }
+}
+
+h4 {
+  color: map-get($h4, color);
+  font-size: map-get($h4, font-size);
+
+  @include sm {
+    font-size: map-get($h4, font-size-mobile);
+  }
+}
+
+h5 {
+  color: map-get($h5, color);
+  font-size: map-get($h5, font-size);
+
+  @include sm {
+    font-size: map-get($h5, font-size-mobile);
+  }
+}
+
+h6 {
+  color: map-get($h6, color);
+  font-size: map-get($h6, font-size);
+
+  @include sm {
+    font-size: map-get($h6, font-size-mobile);
+  }
+}
+
+p:not(.rs-content-cta) {
+  margin: map-get($p, font-margin);
+  font-size: map-get($p, font-size);
+  color: map-get($p, color);
+  line-height: normal;
+  font-family: 'Arial', sans-serif;
+}

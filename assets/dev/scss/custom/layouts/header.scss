@@ -1,0 +1,306 @@
+// TODO Header - Styles
+.socials-links {
+  border-bottom: 1px solid $darkGray;
+
+  p {
+    font-size: 22px !important;
+    color: $darkGray;
+    font-family: $titleFont !important;
+  }
+
+  .icon {
+    transition: $transition;
+    margin: 0 3px;
+  }
+
+  .facebook {
+    fill: #3D5897;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  .instagram {
+    fill: #E1306C;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+  }
+
+  .twitter {
+    fill: #1DA1F2;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 996;
+  transition: $transition;
+
+  &-main {
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include lg {
+      height: map-get($header, mobile-height);
+      padding: 0 7px 0 15px;
+      justify-content: unset;
+    }
+
+    &-wrap {
+      width: 100%;
+      position: relative;
+      z-index: 996;
+      background-color: map-get($header, background);
+
+      @include lg {
+        background-color: map-get($header, mobile-background);
+      }
+
+      .container {
+        @include lg {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .biografi {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &-img {
+        width: 100px;
+        height: 100px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      &-content {
+        p {
+          font-weight: 500;
+          margin: 0;
+        }
+
+        .small-title {
+          font-family: $titleFont;
+        }
+      }
+    }
+  }
+
+  &-logotype {
+    display: block;
+    @include size(330px, 90px);
+
+    @include lg {
+      @include size(180px, 50px);
+      margin-left: auto
+    }
+
+    img,
+    picture {
+      @include size(100%);
+      display: block;
+    }
+  }
+
+  .kush-ishte {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  &-nav {
+    width: 100%;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    transition: $transition;
+
+    @include lg {
+      padding: 0;
+      width: 300px;
+      height: calc(100% - #{map-get($header, mobile-height)});
+      background-color: map-get($menu-mobile, background);
+      box-shadow: none;
+      position: fixed;
+      bottom: 0;
+      right: -110%;
+      z-index: 996;
+      transition: all .4s ease-in-out;
+      border-top: map-get($menu-mobile, border-width) solid map-get($menu-mobile, border-color);
+      border-left: map-get($menu-mobile, border-width) solid map-get($menu-mobile, border-color);
+    }
+
+    @include xs {
+      width: 100%;
+      border-left: none;
+    }
+
+    &.active {
+      right: 0;
+    }
+
+    .container {
+      @include lg {
+        padding-left: 0;
+        padding-right: 0;
+        @include size(100%);
+      }
+    }
+  }
+
+  &-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: $transition;
+
+    @include lg {
+      padding: 15px 0 150px;
+      @include size(100%);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  &-active {
+    box-shadow: $shadowBox;
+
+    .header-nav {
+      background-color: $baseWhite;
+    }
+  }
+
+  &-mobile {
+    .menu {
+      >.menu-item-has-children.open {
+        @include lg {
+          >a {
+            color: map-get($menu-mobile, link-active);
+          }
+
+          &::before {
+            transform: rotate(-135deg);
+            border-color: map-get($menu-mobile, link-active);
+            top: 21px;
+          }
+        }
+
+        .menu-item-has-children.open {
+          @include lg {
+            >a {
+              color: map-get($menu-mobile, link-active);
+            }
+
+            &::before {
+              transform: rotate(-135deg);
+              top: 21px;
+              border-color: map-get($menu-mobile, link-active);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:not(.header-mobile) {
+    .menu {
+      >.menu-item-has-children.open {
+        @include lg {
+          >a {
+            color: map-get($menu-mobile, link-active);
+          }
+
+          &::before {
+            transform: rotate(-135deg);
+            top: 21px;
+            border-color: map-get($menu-mobile, link-active);
+          }
+
+          >ul {
+            display: block;
+          }
+        }
+
+        .menu-item-has-children.open {
+          @include lg {
+            >a {
+              color: map-get($menu-mobile, link-active);
+            }
+
+            &::before {
+              transform: rotate(-135deg);
+              top: 21px;
+              border-color: map-get($menu-mobile, link-active);
+            }
+
+            >ul {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.admin-bar {
+  .header {
+    top: 32px;
+
+    @media (max-width: 782px) {
+      top: 46px;
+    }
+
+
+    &-nav {
+      @include lg {
+        height: calc(100% - (#{map-get($header, mobile-height)} + 32px));
+      }
+
+      @media (max-width: 782px) {
+        height: calc(100% - (#{map-get($header, mobile-height)} + 46px));
+      }
+    }
+  }
+}
+
+#wpadminbar {
+  @include xs {
+    position: fixed;
+  }
+}
+
+.overflowGlobal {
+  overflow: hidden;
+}
